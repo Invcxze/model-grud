@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Создание{% endblock %}
+{% block content %}
+    {% for i in article %}
+    <br>
+    <p>{{ i.id }}</p>
+    <p>{{ i.title }}</p>
+    <p>{{ i.content }}</p>
+    <p>{{ i.URL }}</p>
+    <p>{{i.category}}</p>
+    <p>{{i.date}}</p>
+    <a href="/delete/{{i.id}}"><button>Удалить</button></a>
+    <a href="/change/{{i.id}}"><button>Изменить</button></a>
+    {% endfor %}
+{% endblock %}
